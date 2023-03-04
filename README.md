@@ -8,22 +8,31 @@ small python tutorial
   />
 </p>
 
+## getting started
+```shell
+$ pip3 install virtualenv                            # for creating virtual env
+$ python3 -m virtualenv .venv                        # init venv
+$ source .venv/bin/activate                          # activate
+$ (.venv) pip3 install --upgrade pip
+$ (.venv) pip3 install -r requirements.txt           # install requirements for venv
+```
+
 ## objective
 * create a backend app for the FBI in the USA (API and database) where the user would be able to:
-> API:
+### API:
 
     1. filter crimes by year, month, crime type, case status
 
         1.1. crime type: murder, attempted murder, arson, etc
         1.2. case status: unsolved, cold case, pending, Casey-Anthony-solved, you get it ...
 
-    2. optional filters for fun 🔥: crime name, criminal name, race 
+    2. optional filters for fun 🔥: crime name, criminal name, race
 
         2.1. crime name: greenlease kidnapping, 9/11, JFK assassination (Casey-Anthony-solved status probably), etc
         2.2. criminal name: just go on chatGPT and generate thug names
-        2.3. race: _... i am not getting cancelled for a stupid project_
+        2.3. race: ... fuck if you know
 
-> Database:
+### database:
 
     1. should store all the above mentioned stuff
     2. archi suggestions:
@@ -55,7 +64,7 @@ small python tutorial
 
     # but of course you do what you want
 ```
-> Necessary Utils
+### necessary deliverables
 
     1. A module for RNGing a bunch of crimes, criminals and linking some in solved cases: 1-to-1, multi-to-1, 0-1 etc.\
         suggested tools: 
@@ -74,9 +83,21 @@ small python tutorial
 
     6. good degree of modularity
 
-> Suggested `make` utils
+### extras
+
+1. play with different kinds of API methods for each enpdoint
+2. realistic stats lmao
+
+### suggested `make` utils
 
 1. `make install` for installing python packages `requirements.txt`
 2. `make clean` delete db container volume / clean project
 3. `make test` for running pytests
 4. `make lint` for formatting linting your code
+
+### make sure:
+
+1. REST API standards
+2. good queries, try sqlalchemy
+3. follow MVC arch or something standard
+4. containerize both the API and the db
