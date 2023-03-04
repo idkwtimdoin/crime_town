@@ -22,18 +22,20 @@ $ (.venv) pip3 install -r requirements.txt           # install requirements for 
 1. filter crimes by year, month, crime type, case status
 
     1.1. crime type: murder, attempted murder, arson, etc
+
     1.2. case status: unsolved, cold case, pending, Casey-Anthony-solved, you get it ...
 
 2. optional filters for fun 🔥: crime name, criminal name, race
 
     2.1. crime name: greenlease kidnapping, 9/11, JFK assassination (Casey-Anthony-solved status probably), etc
+
     2.2. criminal name: just go on chatGPT and generate thug names
+
     2.3. race: ... fuck if you know
 
 ### database:
-
-    1. should store all the above mentioned stuff
-    2. archi suggestions:
+1. should store all the above mentioned stuff
+2. archi suggestions:
 ```python
     class Crime:
         _id: str
