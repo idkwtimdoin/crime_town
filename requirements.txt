@@ -1,0 +1,11 @@
+flake8
+isort==5.10.1
+black=21.12b0
+autopep8==1.6.0
+
+fastapi==0.92.0
+mkdocs
+assertpy
+pytest
+pydantic
+sqlalchemy
