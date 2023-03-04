@@ -46,11 +46,14 @@ $ (.venv) pip3 install -r requirements.txt           # install requirements for 
         name: Optional[str]
 
     class Criminal:
+        _id: str
         name: str   # full name, skip the first name last name bs
         age: int
         race: Enum  # lol
 
     class Case:
+        _id: str
+        crime_id: str                   # references Crime._id
         crime_name: Optional[str]       # references Crime.name
         criminals: Optional[List[str]]  # references Criminal.name
         status: str
