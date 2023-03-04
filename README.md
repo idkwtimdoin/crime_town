@@ -1,9 +1,9 @@
-# some_project 🔬📊🔥
+# help the FBI 🔬📊🔥
 small python tutorial
 
 <p align="center">
   <img
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Seal_of_the_Central_Intelligence_Agency_%28B%26W%29.svg/500px-Seal_of_the_Central_Intelligence_Agency_%28B%26W%29.svg.png"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Seal_of_the_Federal_Bureau_of_Investigation.svg/300px-Seal_of_the_Federal_Bureau_of_Investigation.svg.png"
       style="width: 10vw; min-width: 20px;"
   />
 </p>
