@@ -4,7 +4,7 @@ services:
   # * DATABASE
   mysql_db:
     container_name: mysql_db
-    image: mysql/mysql-server:8.0.29
+    image: mysql/mysql-server
     volumes:
       - ./db/data:/var/lib/mysql
       # - ./db/init:/docker-entrypoint-initdb.d
