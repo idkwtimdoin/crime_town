@@ -1,6 +1,9 @@
 # env
+.vscode
 .venv
 __pycache__
 .env
-.vscode
 dev*.ipynb
+
+# volumues
+db/
