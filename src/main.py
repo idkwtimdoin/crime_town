@@ -2,12 +2,16 @@ from fastapi import FastAPI, Request
 from fastapi.routing import APIRoute, APIRouter
 from fastapi_versioning import VersionedFastAPI
 
+from src.utils import Stopwatch
+
+
 APP = FastAPI()
 API_VERSIONS = ["v0", "v1"]
 
 
 async def middleware(request: Request, call_next):
-    response = await call_next(request)
+    with Stopwatch() as sw:
+        response = await call_next(request)
     return response
 
 versioned_routers = []
