@@ -1,0 +1,19 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+  colored:
+    class: coloredlogs.ColoredFormatter
+    format: '%(asctime)s %(filename)12s:%(lineno)-3s %(funcName)-15s [%(levelname)5s] %(message)s'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+
+handlers:
+  stdout:
+    class: logging.StreamHandler
+    formatter: colored
+    stream: ext://sys.stdout
+loggers:
+  '':
+    handlers:
+      - stdout
+    level: DEBUG
+    propagate: True
