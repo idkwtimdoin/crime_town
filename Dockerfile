@@ -5,7 +5,7 @@ RUN mkdir -p ${WORKDIR}
 
 WORKDIR ${WORKDIR}
 
-# * ISNTALL APP REQUIREMENTS
+# * INSTALL APP REQUIREMENTS
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
