@@ -14,6 +14,7 @@ pydantic==2.1.1
 pytest==7.4.0
 assertpy
 coloredlogs==15.0.1
+pandas==2.0.3
 
 # docu
 mkdocs
