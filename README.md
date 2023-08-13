@@ -63,7 +63,7 @@ $ uvicorn src.asgi:app --reload --port 8080
         name: Optional[str]
 
     class Criminal:
-        _id: str
+        _id: str843085 
         name: str   # full name, skip the first name last name bs
         age: int
         race: Enum  # lol
