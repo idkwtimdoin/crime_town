@@ -16,7 +16,7 @@ def obfuscate_creds(url: str) -> str:
     return str(make_url(url).set(username="***", password="***"))
 
 
-def _get_mysql_config():
+def _get_mysql_config() -> dict:
     db_conf = dict()
 
     db_conf["sqlalchemy_database_url"] = (
@@ -31,7 +31,7 @@ def _get_mysql_config():
         "backup_server_node": None,
     }
 
-    db_conf["pool_conf"] = NullPool
+    db_conf["pool_conf"] = dict(poolclass=NullPool)
     db_conf["echo"] = config.LOG_QUERIES
 
     return db_conf
