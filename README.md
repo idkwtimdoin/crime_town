@@ -57,8 +57,7 @@ $ uvicorn src.asgi:app --reload --port 8080
 ```python
     class Crime:
         _id: str
-        datetime_start: str
-        datetime_end: str
+        datetime: str
         location: str
         type: str
         name: Optional[str]
