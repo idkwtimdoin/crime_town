@@ -28,6 +28,11 @@ LOG_QUERIES=True
 $ docker-compose up mysql_db    # run mysql db
 $ make rmvol                    # remove mysql container volume (delete database)
 ```
+* running the API:
+```shell
+$ uvicorn src.asgi:app --reload --port 8080
+```
+
 
 ## objective
 * create a backend app for the FBI in the USA (API and database) where the user would be able to:
