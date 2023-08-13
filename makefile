@@ -12,7 +12,11 @@ install: .venv
 	@$(VENVPATH)/pip3 install -r requirements.txt
 
 clean:
-	rm -rf .venv/
+	@rm -rf .venv/
+
+# use sudo
+rmvol:
+	@rm -rf ./db/data
 
 format:
 
