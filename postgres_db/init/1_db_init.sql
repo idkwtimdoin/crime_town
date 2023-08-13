@@ -1,0 +1,8 @@
+-- init pg database
+
+-- CREATE SCHEMA
+CREATE SCHEMA IF NOT EXISTS mkultra;
+
+-- CREATE USER
+CREATE USER bush WITH PASSWORD 'lonegunman';
+GRANT ALL PRIVILEGES ON SCHEMA mkultra TO bush;

@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # * mysql
+  mysql_db:
+    container_name: mysql_db
+    image: mysql/mysql-server:8.0.32
+    volumes:
+      - ./mysql_db/data:/var/lib/mysql
+      - ./mysql_db/init:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+
+  # * postgres
+  postgres_db:
+    container_name: postgres_db
+    image: postgres:bullseye
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    volumes: 
+      - ./postgres_db/data:/var/lib/postgresql/data
+      - ./postgres_db/init:/docker-entrypoint-initdb.d
+
+  # * API
+  api:
+    container_name: api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./config/:/opt/app/config
+    depends_on:
+      - mysql_db
+    ports:
+      - 5000:5000
+    command: [ --config, config/api.yaml, --host, api, --port, '5000' ]

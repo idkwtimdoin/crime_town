@@ -4,7 +4,8 @@
 .env
 
 # volumues
-db/data
+mysql_db/data
+postgres_db/data
 
 # dev
 dev*.ipynb

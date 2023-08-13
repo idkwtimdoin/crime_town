@@ -5,7 +5,7 @@ import os
 import yaml
 
 
-def read_logging_config(default_path="logging.yml", env_key="LOG_CFG"):
+def read_logging_config(default_path="logging.yaml", env_key="LOG_CFG"):
     path = default_path
     value = os.getenv(env_key, None)
     if value:
