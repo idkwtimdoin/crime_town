@@ -4,7 +4,7 @@ isort==5.10.1
 black==21.12b0
 autopep8==1.6.0
 
-# api
+# app
 uvicorn==0.23.2
 fastapi_versioning==0.10.0
 fastapi==0.101.0
@@ -12,6 +12,7 @@ sqlalchemy==2.0.19
 pydantic==2.1.1
 pytest==7.4.0
 assertpy
+coloredlogs==15.0.1
 
 # docu
 mkdocs
