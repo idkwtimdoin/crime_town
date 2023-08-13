@@ -8,19 +8,18 @@ from src.utils import Timer
 
 logger = logging.getLogger(__name__)
 
-app, _ = get_app()
+app = get_app()
 
 
 @app.middleware("http")
-async def middleware(request: Request, call_next) -> Response:
+async def middleware(request: Request, call_next: callable) -> Response:
     # record time taken for request
     with Timer() as timer:
         response = await call_next(request)
 
-    host, port = request.scope["client"]
     request_path = request.scope["path"]
     request_method = request.scope["method"]
-    logger.debug(f"{host}:{port} t={timer.total_time}s [{request_method}] {request_path}")
+    logger.debug(f"t={timer.total_time}s [{request_method}] {request_path}")
 
     return response
 

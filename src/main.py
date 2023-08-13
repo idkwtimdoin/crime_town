@@ -43,4 +43,4 @@ def get_app() -> Tuple[FastAPI, FastAPI]:
         content = Path("src/static/index.html").read_text()
         return content
 
-    return v1_app, app
+    return v1_app
