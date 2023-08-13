@@ -5,7 +5,6 @@ from fastapi_versioning import VersionedFastAPI
 from starlette.staticfiles import StaticFiles
 from pathlib import Path
 
-
 from src.api import v1_router
 
 APP_TITLE = "CIA app"
