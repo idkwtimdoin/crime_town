@@ -15,3 +15,6 @@ assertpy
 
 # docu
 mkdocs
+
+#file parsing
+pyyaml
