@@ -1,6 +1,15 @@
 # env
-.venv
-__pycache__
-.env
 .vscode
+.venv
+.env
+
+# volumues
+db/data
+
+# dev
 dev*.ipynb
+test.http
+
+# py
+__pycache__
+*.pyc

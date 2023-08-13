@@ -8,12 +8,25 @@ small python tutorial
 </p>
 
 ## getting started
+* setup environment:
 ```shell
-$ pip3 install virtualenv                            # for creating virtual env
-$ python3 -m virtualenv .venv                        # init venv
-$ source .venv/bin/activate                          # activate
-$ (.venv) pip3 install --upgrade pip
-$ (.venv) pip3 install -r requirements.txt           # install requirements for venv
+$ make install
+```
+* create env file `.env` containing app & db config env vars:
+```shell
+# db config
+DB_HOST=localhost
+DB_PORT=3306
+DB_SCHEMA=mkultra
+DB_NAME=mkultra
+DB_USERNAME=bush
+DB_PASSWORD=lonegunman
+LOG_QUERIES=True
+```
+* db related:
+```shell
+$ docker-compose up mysql_db    # run mysql db
+$ make rmvol                    # remove mysql container volume (delete database)
 ```
 
 ## objective
