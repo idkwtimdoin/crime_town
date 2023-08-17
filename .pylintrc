@@ -1,0 +1,27 @@
+[MASTER]
+ignore=.venv
+init-hook="from pylint.config import find_pylintrc; import os, sys; sys.path.append(os.path.dirname(find_pylintrc()))"
+extension-pkg-whitelist=pydantic
+
+[REPORTS]
+reports=no
+score=no
+
+[FORMAT]
+max-line-length=120
+disable=missing-docstring
+
+[SIMILARITIES]
+ignore-comments=yes
+ignore-docstrings=yes
+ignore-imports=yes
+min-similarity-lines=4
+
+[BASIC]
+good-names=i, j, k, db, df
+good-names-rgxs=^[_a-z][_a-z0-9]?$
+include-naming-hint=yes
+
+[DESIGN]
+max-args=8
+max-attributes=12

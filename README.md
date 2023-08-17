@@ -63,7 +63,7 @@ $ uvicorn src.asgi:app --reload --port 8080
         name: Optional[str]
 
     class Criminal:
-        _id: str843085 
+        _id: str
         name: str   # full name, skip the first name last name bs
         age: int
         race: Enum  # lol
@@ -86,7 +86,7 @@ $ uvicorn src.asgi:app --reload --port 8080
 ```
 ### necessary deliverables
 1. A module for RNGing a bunch of crimes, criminals and linking some in solved cases: 1-to-1, multi-to-1, 0-1 etc.\
-    suggested tools: 
+    suggested tools:
     * chatGPT for RNGing random crime & criminal names
     * `numpy`, `pandas` for simulating population curves, stddevs
 2. Unit tests in `test/`
