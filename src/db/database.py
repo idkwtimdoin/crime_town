@@ -9,7 +9,6 @@ from sqlalchemy.orm.decl_api import DeclarativeMeta
 
 from src import config
 
-
 logger = logging.getLogger(__name__)
 
 

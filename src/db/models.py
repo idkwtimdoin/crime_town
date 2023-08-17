@@ -1,6 +1,7 @@
 import logging
 from datetime import datetime
-from sqlalchemy import Column, DateTime, Float, String, UUID
+import uuid
+from sqlalchemy import Column, DateTime, Float, String
 
 from src.db.database import Base, engine
 
@@ -12,7 +13,7 @@ class Crime(Base):
     __tablename__ = "crime"
     __table_args__ = {"schema": "mkultra"}
 
-    _id = Column(UUID, primary_key=True)
+    id = Column("crime_id", String(36), primary_key=True, default=str(uuid.uuid4()))
     datetime = Column(DateTime, default=datetime.now())
     location = Column(String(100), nullable=True)
     crime_type = Column(String(40), nullable=True)
@@ -23,9 +24,9 @@ class Criminal(Base):
     __tablename__ = "criminal"
     __table_args__ = {"schema": "mkultra"}
 
-    _id = Column(UUID, primary_key=True)
-    fname = Column(String(20), nullable=True)
-    lname = Column(String(20), nullable=True)
+    id = Column("criminal_id", String(36), primary_key=True, default=str(uuid.uuid4()))
+    fname = Column(String(40), nullable=True)
+    lname = Column(String(40), nullable=True)
     date_birth = Column(DateTime, default=datetime.now())
 
 
@@ -33,13 +34,13 @@ class Case(Base):
     __tablename__ = "case"
     __table_args__ = {"schema": "mkultra"}
 
-    _id = Column(UUID, primary_key=True)
+    id = Column("case_id", String(36), primary_key=True, default=str(uuid.uuid4()))
     crime_name = Column(String(40), nullable=True)
     status = Column(String(40), nullable=True)
     date_open = Column(DateTime, default=datetime.now())
     date_closed = Column(DateTime, default=datetime.now())
     suspects = Column(String(40), nullable=True)
-    lead_detective = Column(UUID, nullable=True)
+    lead_detective = Column(String(36), nullable=True)
     funds_allocated = Column(Float, nullable=True)
 
 
@@ -47,9 +48,9 @@ class Detective(Base):
     __tablename__ = "detective"
     __table_args__ = {"schema": "mkultra"}
 
-    _id = Column(UUID, primary_key=True)
-    fname = Column(String(20), nullable=True)
-    lname = Column(String(20), nullable=True)
+    id = Column("detective_id", String(36), primary_key=True, default=str(uuid.uuid4()))
+    fname = Column(String(40), nullable=True)
+    lname = Column(String(40), nullable=True)
     date_birth = Column(DateTime, default=datetime.now())
 
 

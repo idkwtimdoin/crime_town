@@ -20,9 +20,11 @@ pytest==7.4.0
 assertpy==1.1
 coloredlogs==15.0.1
 pandas==2.0.3
+cryptography==41.0.3
 
 # docu
 mkdocs==1.5.2
 
 #file parsing
 pyyaml==6.0.1
+omegaconf==2.1.1
