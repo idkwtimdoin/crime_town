@@ -7,7 +7,6 @@ from src.main import get_app
 from src.utils import Timer
 
 logger = logging.getLogger(__name__)
-
 app = get_app()
 
 

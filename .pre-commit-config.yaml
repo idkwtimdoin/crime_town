@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: lab/resources
+      - id: end-of-file-fixer
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: check-case-conflict
+
+  - repo: local
+    hooks:
+      - id: inline-lint-with-bash
+        name: linting
+        entry: bash -c 'make lint'
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: inline-pytest-with-bash
+        name: pytests
+        entry: bash -c 'make test'
+        language: system
+        types: [python]
+        pass_filenames: false
+
+  - repo: https://github.com/psf/black
+    rev: 23.7.0
+    hooks:
+      - id: black
+        exclude: ^dist/

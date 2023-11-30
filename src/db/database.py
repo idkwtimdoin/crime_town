@@ -3,12 +3,11 @@ import logging.config
 from sqlalchemy import create_engine
 from sqlalchemy.engine import make_url
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.pool import NullPool
 from sqlalchemy.orm.decl_api import DeclarativeMeta
 
 from src import config
-
 
 logger = logging.getLogger(__name__)
 
@@ -52,8 +51,8 @@ Base: DeclarativeMeta = declarative_base()
 engine = _get_orm_engine()
 
 
-async def get_db():
-    db = _get_sessionmaker(_get_orm_engine())()
+async def get_db() -> Session:
+    db: Session = _get_sessionmaker(_get_orm_engine())()
     try:
         yield db
     finally:

@@ -5,7 +5,7 @@ from fastapi_versioning import VersionedFastAPI
 from starlette.staticfiles import StaticFiles
 from pathlib import Path
 
-from src.api import v1_router
+from src.api import router
 
 APP_TITLE = "CIA app"
 OPENAPI_URL = "/openapi.json"
@@ -20,7 +20,7 @@ def get_app() -> Tuple[FastAPI, FastAPI]:
         openapi_url=OPENAPI_URL,
         swagger_ui_oauth2_redirect_url=SWAGGER_UI_OAUTH_2_REDIRECT_URL,
     )
-    app.include_router(v1_router)
+    app.include_router(router)
     v1_app = VersionedFastAPI(
         app,
         version_format="{major}",

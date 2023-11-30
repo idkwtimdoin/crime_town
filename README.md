@@ -45,11 +45,11 @@ $ uvicorn src.asgi:app --reload --port 8080
 
 2. optional filters for fun 🔥: crime name, criminal name, race
 
-    2.1. crime name: greenlease kidnapping, 9/11, JFK assassination (Casey-Anthony-solved status probably), etc
+    2.1. crime name: greenlease kidnapping, 9/11, JFK assassination, etc
 
     2.2. criminal name: just go on chatGPT and generate thug names
 
-    2.3. race: ... fuck if you know
+    2.3. race: White Black Latino Asian
 
 ### database:
 1. should store all the above mentioned stuff
@@ -63,10 +63,10 @@ $ uvicorn src.asgi:app --reload --port 8080
         name: Optional[str]
 
     class Criminal:
-        _id: str843085 
-        name: str   # full name, skip the first name last name bs
+        _id: str
+        name: str
         age: int
-        race: Enum  # lol
+        race: Enum
 
     class Case:
         _id: str
@@ -78,7 +78,7 @@ $ uvicorn src.asgi:app --reload --port 8080
         date_closed: Optional[str]
         suspects: Optional[List[str]]
         lead_detective: List[str]
-        funds_allocated: Optional[float]    # in case of Casey Anothony: probably 15 bucks
+        funds_allocated: Optional[float]
 
     class Detective: ...    # ?
 
@@ -86,7 +86,7 @@ $ uvicorn src.asgi:app --reload --port 8080
 ```
 ### necessary deliverables
 1. A module for RNGing a bunch of crimes, criminals and linking some in solved cases: 1-to-1, multi-to-1, 0-1 etc.\
-    suggested tools: 
+    suggested tools:
     * chatGPT for RNGing random crime & criminal names
     * `numpy`, `pandas` for simulating population curves, stddevs
 2. Unit tests in `test/`
