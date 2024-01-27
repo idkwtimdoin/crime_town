@@ -1,5 +1,5 @@
 
-PROJECT_PATH := $(shell git rev-parse --show-toplevel)
+PROJECT_PATH := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 VENVNAME := .venv
 VENVPATH := $(PROJECT_PATH)/$(VENVNAME)/bin
 
