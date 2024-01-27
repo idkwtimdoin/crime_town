@@ -17,10 +17,10 @@ $ make install
 # db config
 DB_HOST=localhost
 DB_PORT=3306
-DB_SCHEMA=mkultra
-DB_NAME=mkultra
-DB_USERNAME=bush
-DB_PASSWORD=lonegunman
+DB_SCHEMA=crimes
+DB_NAME=crimes
+DB_USERNAME=criminal
+DB_PASSWORD=secretpw
 LOG_QUERIES=True
 ```
 * db related:
@@ -45,11 +45,11 @@ $ uvicorn src.asgi:app --reload --port 8080
 
 2. optional filters for fun 🔥: crime name, criminal name, race
 
-    2.1. crime name: greenlease kidnapping, 9/11, JFK assassination (Casey-Anthony-solved status probably), etc
+    2.1. crime name: greenlease kidnapping, 9/11, JFK assassination, etc
 
     2.2. criminal name: just go on chatGPT and generate thug names
 
-    2.3. race: ... fuck if you know
+    2.3. race: White Black Latino Asian
 
 ### database:
 1. should store all the above mentioned stuff
@@ -64,9 +64,9 @@ $ uvicorn src.asgi:app --reload --port 8080
 
     class Criminal:
         _id: str
-        name: str   # full name, skip the first name last name bs
+        name: str
         age: int
-        race: Enum  # lol
+        race: Enum
 
     class Case:
         _id: str
@@ -78,7 +78,7 @@ $ uvicorn src.asgi:app --reload --port 8080
         date_closed: Optional[str]
         suspects: Optional[List[str]]
         lead_detective: List[str]
-        funds_allocated: Optional[float]    # in case of Casey Anothony: probably 15 bucks
+        funds_allocated: Optional[float]
 
     class Detective: ...    # ?
 

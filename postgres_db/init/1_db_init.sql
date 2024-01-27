@@ -1,8 +1,8 @@
 -- init pg database
 
 -- CREATE SCHEMA
-CREATE SCHEMA IF NOT EXISTS mkultra;
+CREATE SCHEMA IF NOT EXISTS crimes;
 
 -- CREATE USER
-CREATE USER bush WITH PASSWORD 'lonegunman';
-GRANT ALL PRIVILEGES ON SCHEMA mkultra TO bush;
+CREATE USER criminal WITH PASSWORD 'secretpw';
+GRANT ALL PRIVILEGES ON SCHEMA crimes TO criminal;

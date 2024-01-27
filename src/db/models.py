@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 class Crime(Base):
     __tablename__ = "crime"
-    __table_args__ = {"schema": "mkultra"}
+    __table_args__ = {"schema": "crimes"}
 
     id = Column("crime_id", String(36), primary_key=True, default=str(uuid.uuid4()))
     datetime = Column(DateTime, default=datetime.now())
@@ -22,7 +22,7 @@ class Crime(Base):
 
 class Criminal(Base):
     __tablename__ = "criminal"
-    __table_args__ = {"schema": "mkultra"}
+    __table_args__ = {"schema": "crimes"}
 
     id = Column("criminal_id", String(36), primary_key=True, default=str(uuid.uuid4()))
     fname = Column(String(40), nullable=True)
@@ -32,7 +32,7 @@ class Criminal(Base):
 
 class Case(Base):
     __tablename__ = "case"
-    __table_args__ = {"schema": "mkultra"}
+    __table_args__ = {"schema": "crimes"}
 
     id = Column("case_id", String(36), primary_key=True, default=str(uuid.uuid4()))
     crime_name = Column(String(40), nullable=True)
@@ -46,7 +46,7 @@ class Case(Base):
 
 class Detective(Base):
     __tablename__ = "detective"
-    __table_args__ = {"schema": "mkultra"}
+    __table_args__ = {"schema": "crimes"}
 
     id = Column("detective_id", String(36), primary_key=True, default=str(uuid.uuid4()))
     fname = Column(String(40), nullable=True)
