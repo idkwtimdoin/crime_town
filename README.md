@@ -17,10 +17,10 @@ $ make install
 # db config
 DB_HOST=localhost
 DB_PORT=3306
-DB_SCHEMA=mkultra
-DB_NAME=mkultra
-DB_USERNAME=bush
-DB_PASSWORD=lonegunman
+DB_SCHEMA=crimes
+DB_NAME=crimes
+DB_USERNAME=criminal
+DB_PASSWORD=secretpw
 LOG_QUERIES=True
 ```
 * db related:
