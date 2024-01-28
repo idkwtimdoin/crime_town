@@ -1,305 +1,119 @@
-english:
-  first_names:
-    - James
-    - Emma
-    - Liam
-    - Olivia
-    - Noah
-    - Ava
-    - William
-    - Sophia
-    - Oliver
-    - Isabella
-    - Elijah
-    - Mia
-    - Benjamin
-    - Charlotte
-    - Lucas
-    - Amelia
-    - Henry
-    - Harper
-    - Alexander
-    - Evelyn
-    - Samuel
-    - Abigail
-    - Daniel
-    - Emily
-    - Matthew
-    - Elizabeth
-    - David
-    - Sofia
-    - Joseph
-    - Avery
-    - Carter
-    - Ella
-    - Owen
-    - Scarlett
-    - Wyatt
-    - Grace
-    - Gabriel
-    - Chloe
-    - Michael
-    - Victoria
-    - Jackson
-    - Riley
-    - Leo
-    - Aria
-    - Sebastian
-    - Lily
-    - Jack
-    - Aubrey
-    - Henry
-    - Zoey
-
-  last_names:
-    - Smith
-    - Johnson
-    - Williams
-    - Jones
-    - Brown
-    - Davis
-    - Miller
-    - Wilson
-    - Moore
-    - Taylor
-    - Anderson
-    - Jackson
-    - White
-    - Harris
-    - Martin
-    - Thompson
-    - Garcia
-    - Martinez
-    - Robinson
-    - Clark
-    - Rodriguez
-    - Lewis
-    - Lee
-    - Walker
-    - Hall
-    - Allen
-    - Young
-    - Hernandez
-    - King
-    - Wright
-    - Lopez
-    - Hill
-    - Scott
-    - Green
-    - Adams
-    - Baker
-    - Gonzalez
-    - Nelson
-    - Carter
-    - Mitchell
-    - Perez
-    - Roberts
-    - Turner
-    - Phillips
-    - Campbell
-    - Parker
-    - Evans
-    - Edwards
-    - Collins
-
-french:
-  first_names:
-    - Louis
-    - Emma
-    - Gabriel
-    - Léa
-    - Arthur
-    - Chloé
-    - Raphaël
-    - Camille
-    - Adam
-    - Manon
-    - Jules
-    - Inès
-    - Lucas
-    - Zoé
-    - Léo
-    - Jade
-    - Hugo
-    - Sarah
-    - Ethan
-    - Louise
-    - Nathan
-    - Anna
-    - Noah
-    - Clara
-    - Maël
-    - Margaux
-    - Enzo
-    - Léna
-    - Liam
-    - Éléa
-    - Timéo
-    - Lucie
-    - Paul
-    - Léna
-    - Tom
-    - Alice
-    - Théo
-    - Eva
-    - Lucas
-    - Jeanne
-    - Mathis
-    - Juliette
-    - Maxime
-    - Manon
-    - Antoine
-    - Emma
-    - Édouard
-    - Louise
-    - Émile
-    - Zoé
-
-  last_names:
-    - Martin
-    - Bernard
-    - Dubois
-    - Thomas
-    - Robert
-    - Richard
-    - Petit
-    - Durand
-    - Leroy
-    - Moreau
-    - Simon
-    - Laurent
-    - Lefebvre
-    - Garcia
-    - Martinez
-    - David
-    - Dupont
-    - Diaz
-    - Bertrand
-    - Morel
-    - Fournier
-    - Rousseau
-    - Girard
-    - Mercier
-    - Bonnet
-    - Lambert
-    - Blanc
-    - Gauthier
-    - Roux
-    - Henry
-    - Lecomte
-    - Denis
-    - Duval
-    - Martinez
-    - Dupuis
-    - Sanchez
-    - Deschamps
-    - Garnier
-    - Klein
-    - Dumont
-    - Fernandez
-    - Gonzalez
-    - Laurent
-    - Fabre
-    - Nguyen
-    - Philippe
-    - Maillard
-    - Leroux
-
 german:
-  first_names:
-    - Lukas
-    - Lena
-    - Paul
-    - Laura
-    - Finn
-    - Emma
-    - Max
-    - Mia
-    - Jonas
-    - Hannah
-    - Noah
-    - Anna
-    - Felix
-    - Leonie
-    - Emil
-    - Marie
-    - Ben
-    - Lina
-    - Tim
-    - Sophie
-    - Luca
-    - Mia
-    - Erik
-    - Emilia
-    - David
-    - Sofia
-    - Jan
-    - Emily
-    - Moritz
-    - Amelie
-    - Anton
-    - Johanna
-    - Julius
-    - Lea
-    - Niklas
-    - Lara
-    - Philip
-    - Maja
-    - Henry
-    - Ella
-    - Simon
-    - Ida
-    - Jakob
-    - Clara
-    - Oskar
-    - Zoe
-    - Theo
-    - Luisa
-
-  last_names:
+  first_name:
+    - Hans
+    - Greta
+    - Karl
+    - Ingrid
+    - Dieter
+    - Anja
+    - Klaus
+    - Petra
+    - Stefan
+    - Sabine
+  last_name:
     - Müller
     - Schmidt
-    - Schneider
-    - Fischer
-    - Weber
-    - Meyer
-    - Wagner
     - Becker
+    - Wagner
+    - Weber
+    - Fischer
     - Schulz
     - Hoffmann
     - Schäfer
     - Koch
-    - Richter
-    - Bauer
-    - Klein
-    - Wolf
-    - Zimmermann
-    - Schröder
-    - Neumann
-    - Schwarz
-    - Braun
-    - Krüger
-    - Hofmann
-    - Hartmann
-    - Lange
-    - Vogel
-    - Schmitt
-    - Werner
-    - Schmitz
-    - Krause
-    - Meier
-    - Lehmann
-    - Huber
-    - Kaiser
-    - Fuchs
-    - Peters
-    - Lang
-    - Möller
-    - Weiß
-    - Beck
-    - Köhler
-    - Schmid
-    - Schulze
-    - Seidel
-    - König
-    - Berger
+
+english:
+  first_name:
+    - John
+    - Emma
+    - William
+    - Olivia
+    - James
+    - Sophia
+    - Benjamin
+    - Mia
+    - Ethan
+    - Ava
+  last_name:
+    - Smith
+    - Johnson
+    - Davis
+    - Brown
+    - Wilson
+    - Moore
+    - Anderson
+    - Clark
+    - Hall
+    - Turner
+
+french:
+  first_name:
+    - Pierre
+    - Marie
+    - Antoine
+    - Camille
+    - François
+    - Sophie
+    - Louis
+    - Amélie
+    - Étienne
+    - Charlotte
+  last_name:
+    - Dubois
+    - Dupont
+    - Martin
+    - Leroy
+    - Lambert
+    - Lefevre
+    - Rousseau
+    - Moreau
+    - Fournier
+    - Girard
+
+spanish:
+  first_name:
+    - Miguel
+    - María
+    - Alejandro
+    - Isabella
+    - Diego
+    - Sofia
+    - Javier
+    - Gabriela
+    - Carlos
+    - Lucia
+  last_name:
+    - García
+    - Rodríguez
+    - López
+    - Pérez
+    - González
+    - Hernandez
+    - Ramirez
+    - Torres
+    - Diaz
+    - Morales
+
+italian:
+  first_name:
+    - Giuseppe
+    - Sofia
+    - Marco
+    - Isabella
+    - Francesco
+    - Alessia
+    - Leonardo
+    - Chiara
+    - Lorenzo
+    - Martina
+  last_name:
+    - Rossi
+    - Ferrari
+    - Esposito
+    - Ricci
+    - Romano
+    - Moretti
+    - Conti
+    - Rizzo
+    - Gallo
+    - De Luca

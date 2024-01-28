@@ -11,4 +11,3 @@ crimes_list = data['crimes']
 # Select a random value from the list
 random_crime = random.choice(crimes_list)
 print("Random Crime:", random_crime)
-

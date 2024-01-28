@@ -16,15 +16,15 @@ class Crime(Base):
     id = Column("crime_id", String(36), primary_key=True, default=str(uuid.uuid4()))
     datetime = Column(DateTime, default=datetime.now())
     location = Column(String(100), nullable=True)
-    crime_type = Column(String(40), nullable=True)
-    name = Column(String(40), nullable=True)
+    crime_type = Column(String(80), nullable=True)
+    name = Column(String(80), nullable=True)
 
 
-class Criminal(Base):
-    __tablename__ = "criminal"
+class Suspect(Base):
+    __tablename__ = "suspect"
     __table_args__ = {"schema": "crimes"}
 
-    id = Column("criminal_id", String(36), primary_key=True, default=str(uuid.uuid4()))
+    id = Column("suspect_id", String(36), primary_key=True, default=str(uuid.uuid4()))
     fname = Column(String(40), nullable=True)
     lname = Column(String(40), nullable=True)
     date_birth = Column(DateTime, default=datetime.now())
@@ -35,11 +35,11 @@ class Case(Base):
     __table_args__ = {"schema": "crimes"}
 
     id = Column("case_id", String(36), primary_key=True, default=str(uuid.uuid4()))
-    crime_name = Column(String(40), nullable=True)
+    crime_name = Column(String(80), nullable=True)
     status = Column(String(40), nullable=True)
     date_open = Column(DateTime, default=datetime.now())
     date_closed = Column(DateTime, default=datetime.now())
-    suspects = Column(String(40), nullable=True)
+    suspect_id = Column(String(36), nullable=True)
     lead_detective = Column(String(36), nullable=True)
     funds_allocated = Column(Float, nullable=True)
 
