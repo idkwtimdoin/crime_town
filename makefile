@@ -1,5 +1,5 @@
 
-PROJECT_PATH := $(shell git rev-parse --show-toplevel)
+PROJECT_PATH := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 VENVNAME := .venv
 VENVPATH := $(PROJECT_PATH)/$(VENVNAME)/bin
 
@@ -21,9 +21,7 @@ clean:
 	@rm -rf .venv/
 
 rmvol:
-	@rm -rf ./db/data || \
-		rm -rf ./mysql_db/data || \
-		rm -rf ./postgres_db/data || true
+	@rm -rf ./mysql_db/data ./postgres_db/data
 
 format:
 	@$(VENVPATH)/pre-commit run trailing-whitespace --all-files || true
